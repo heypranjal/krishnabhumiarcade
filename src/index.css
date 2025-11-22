@@ -1,0 +1,295 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Krishna Bhumi Arcade Divine Color Palette */
+    --background: 45 60% 96%;
+    --foreground: 240 40% 10%;
+
+    --card: 45 50% 98%;
+    --card-foreground: 240 40% 10%;
+
+    --popover: 45 50% 98%;
+    --popover-foreground: 240 40% 10%;
+
+    /* Gold accent - primary brand color */
+    --primary: 43 50% 52%;
+    --primary-foreground: 45 60% 98%;
+
+    /* Deep spiritual blue */
+    --secondary: 240 70% 13%;
+    --secondary-foreground: 45 60% 98%;
+
+    /* Cream/Beige muted tones */
+    --muted: 45 40% 90%;
+    --muted-foreground: 43 20% 40%;
+
+    /* Temple Orange accent */
+    --accent: 38 93% 44%;
+    --accent-foreground: 45 60% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 45 60% 98%;
+
+    --border: 45 30% 85%;
+    --input: 45 30% 85%;
+    --ring: 43 50% 52%;
+
+    --radius: 0.75rem;
+
+    /* Custom divine theme colors */
+    --divine-gold: 43 50% 52%;
+    --divine-cream: 45 70% 94%;
+    --divine-beige: 45 40% 82%;
+    --divine-blue: 240 70% 13%;
+    --divine-orange: 38 93% 44%;
+    
+    /* Gradients */
+    --gradient-divine: linear-gradient(135deg, hsl(43 50% 52%) 0%, hsl(38 93% 44%) 100%);
+    --gradient-sacred: linear-gradient(180deg, hsl(45 70% 94%) 0%, hsl(45 40% 82%) 100%);
+    
+    /* Shadows with gold glow */
+    --shadow-divine: 0 10px 40px -10px hsl(43 50% 52% / 0.3);
+    --shadow-elevated: 0 20px 50px -15px hsl(43 50% 52% / 0.4);
+    
+    /* Transitions */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 240 70% 13%;
+    --foreground: 45 60% 98%;
+
+    --card: 240 65% 15%;
+    --card-foreground: 45 60% 98%;
+
+    --popover: 240 65% 15%;
+    --popover-foreground: 45 60% 98%;
+
+    --primary: 43 50% 52%;
+    --primary-foreground: 240 70% 13%;
+
+    --secondary: 240 50% 20%;
+    --secondary-foreground: 45 60% 98%;
+
+    --muted: 240 40% 22%;
+    --muted-foreground: 45 30% 70%;
+
+    --accent: 38 93% 44%;
+    --accent-foreground: 45 60% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 45 60% 98%;
+
+    --border: 240 40% 25%;
+    --input: 240 40% 25%;
+    --ring: 43 50% 52%;
+    
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 100;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: -0.011em;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+
+  /* Enhanced typography */
+  p {
+    font-weight: 100;
+    line-height: 1.7;
+    letter-spacing: -0.009em;
+  }
+
+  /* Elegant accents with Inter */
+  .font-accent {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer utilities {
+  .divine-gradient {
+    background: var(--gradient-divine);
+  }
+  
+  .sacred-gradient {
+    background: var(--gradient-sacred);
+  }
+  
+  .text-shadow-gold {
+    text-shadow: 0 2px 10px hsl(var(--divine-gold) / 0.3);
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  .animate-shimmer {
+    animation: shimmer 3s infinite;
+  }
+
+  /* Scroll Reveal Animations */
+  .reveal-fade-in {
+    opacity: 0;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .reveal-fade-in.active {
+    opacity: 1;
+  }
+
+  .reveal-fade-up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .reveal-fade-up.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reveal-fade-down {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .reveal-fade-down.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reveal-fade-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .reveal-fade-left.active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .reveal-fade-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .reveal-fade-right.active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .reveal-scale {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .reveal-scale.active {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .reveal-rotate {
+    opacity: 0;
+    transform: rotate(-10deg) scale(0.9);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .reveal-rotate.active {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+
+  /* Stagger delays for child elements */
+  .stagger-1 { transition-delay: 0.1s; }
+  .stagger-2 { transition-delay: 0.2s; }
+  .stagger-3 { transition-delay: 0.3s; }
+  .stagger-4 { transition-delay: 0.4s; }
+  .stagger-5 { transition-delay: 0.5s; }
+  .stagger-6 { transition-delay: 0.6s; }
+
+  /* Parallax utilities */
+  .parallax-slow {
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .parallax-medium {
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .parallax-fast {
+    transition: transform 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+}
