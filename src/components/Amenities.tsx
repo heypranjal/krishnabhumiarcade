@@ -3,12 +3,12 @@ import { Shield, Car, MoveVertical, Flame, Building, Leaf } from "lucide-react";
 import { useScrollReveal, useParallax } from "@/hooks/useScrollReveal";
 
 const amenities = [
-  { icon: Shield, title: "24×7 Security", description: "Comprehensive surveillance and safety" },
-  { icon: Car, title: "Ample Parking", description: "Multi-level parking facility" },
-  { icon: MoveVertical, title: "Escalators/Elevators", description: "Easy accessibility across floors" },
-  { icon: Flame, title: "Fire Safety Systems", description: "Advanced fire detection and prevention" },
-  { icon: Building, title: "RCC Structure", description: "Robust earthquake-resistant design" },
-  { icon: Leaf, title: "Eco-Friendly Design", description: "Sustainable and energy efficient" }
+  { icon: Shield, title: "24×7 Security", description: "Comprehensive surveillance and safety", customImage: "https://res.cloudinary.com/dadfpmrat/image/upload/v1763822076/security_habouz.png" },
+  { icon: Car, title: "Ample Parking", description: "Multi-level parking facility", customImage: "https://res.cloudinary.com/dadfpmrat/image/upload/v1763822128/parking_sj2jnc.png" },
+  { icon: MoveVertical, title: "Escalators/Elevators", description: "Easy accessibility across floors", customImage: "https://res.cloudinary.com/dadfpmrat/image/upload/v1763822249/escaltor_vpmyqu.png" },
+  { icon: Flame, title: "Fire Safety Systems", description: "Advanced fire detection and prevention", customImage: "https://res.cloudinary.com/dadfpmrat/image/upload/v1763822374/fire_qjzabc.png" },
+  { icon: Building, title: "RCC Structure", description: "Robust earthquake-resistant design", customImage: "https://res.cloudinary.com/dadfpmrat/image/upload/v1763822473/rcc_jdi3za.png" },
+  { icon: Leaf, title: "Eco-Friendly Design", description: "Sustainable and energy efficient", customImage: "https://res.cloudinary.com/dadfpmrat/image/upload/v1763822595/eco_pw0hkw.png" }
 ];
 
 // Placeholder for IGBC badge - add actual image path
@@ -57,9 +57,17 @@ const Amenities = () => {
                 >
                   <CardContent className="p-6 flex items-start space-x-4">
                     <div className="flex-shrink-0">
-                      <div className="w-12 h-12 rounded-lg divine-gradient flex items-center justify-center">
-                        <Icon className="h-6 w-6 text-primary-foreground" />
-                      </div>
+                      {amenity.customImage ? (
+                        <img
+                          src={amenity.customImage}
+                          alt={amenity.title}
+                          className="w-12 h-12 object-contain rounded-full"
+                        />
+                      ) : (
+                        <div className="w-12 h-12 rounded-lg divine-gradient flex items-center justify-center">
+                          <Icon className="h-6 w-6 text-primary-foreground" />
+                        </div>
+                      )}
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-secondary mb-2">

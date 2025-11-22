@@ -8,19 +8,22 @@ const features = [
     icon: MapPin,
     title: "Strategic Location",
     description: "Gateway to Vrindavan's most sacred landmarks and cultural destinations",
-    color: "text-primary"
+    color: "text-primary",
+    customImage: "https://res.cloudinary.com/dadfpmrat/image/upload/v1763820336/strategic_location_fhgony.png"
   },
   {
     icon: Users,
     title: "High Footfall",
     description: "Proximity to Prem Mandir, ISKCON Temple & Banke Bihari Temple brings millions annually",
-    color: "text-accent"
+    color: "text-accent",
+    customImage: "https://res.cloudinary.com/dadfpmrat/image/upload/v1763820756/footfall_fk1zpj.png"
   },
   {
     icon: Recycle,
     title: "Sustainability",
     description: "Vrindavan's 1st IGBC Gold Rated Retail Green Building - eco-conscious excellence",
-    color: "text-green-600"
+    color: "text-green-600",
+    customImage: "https://res.cloudinary.com/dadfpmrat/image/upload/v1763820751/sustain_oamqen.png"
   }
 ];
 
@@ -77,8 +80,16 @@ const WhyKBArcade = () => {
                   <Card className="hover:shadow-2xl transition-all duration-300 border-2 hover:border-primary/50 h-full">
                     <motion.div whileHover={{ y: -10 }} transition={{ duration: 0.3 }}>
                       <CardContent className="p-6 text-center space-y-4">
-                        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-muted mb-4">
-                          <Icon className={`h-8 w-8 ${feature.color}`} />
+                        <div className="inline-flex items-center justify-center mb-4">
+                          {feature.customImage ? (
+                            <img
+                              src={feature.customImage}
+                              alt={feature.title}
+                              className="h-16 w-16 object-contain rounded-full"
+                            />
+                          ) : (
+                            <Icon className={`h-8 w-8 ${feature.color}`} />
+                          )}
                         </div>
                         <h3 className="text-xl font-bold text-secondary">
                           {feature.title}

@@ -12,25 +12,29 @@ const stats = [
     icon: MapPin,
     title: "Strategic Location",
     subtitle: "Chhatikara Road serves as the gateway to Shree Vrindavan Dham",
-    description: "Witnessing millions of visitors annually"
+    description: "Witnessing millions of visitors annually",
+    customImage: "https://res.cloudinary.com/dadfpmrat/image/upload/v1763820336/strategic_location_fhgony.png"
   },
   {
     icon: Users,
     title: "High Footfall",
     subtitle: "Proximity to renowned temples like Prem Mandir, Banke Bihari Mandir, and ISKCON Temple",
-    description: "Ensures a steady flow of devotees and tourists"
+    description: "Ensures a steady flow of devotees and tourists",
+    customImage: "https://res.cloudinary.com/dadfpmrat/image/upload/v1763820756/footfall_fk1zpj.png"
   },
   {
     icon: Store,
     title: "Tailored Spaces",
     subtitle: "Curated retail areas designed to suit local shop owners and branded retailers",
-    description: "Perfect blend of traditional and modern commerce"
+    description: "Perfect blend of traditional and modern commerce",
+    customImage: "https://res.cloudinary.com/dadfpmrat/image/upload/v1763823238/tailored_space_cd3hkk.png"
   },
   {
     icon: Building2,
     title: "Boost to Sales",
     subtitle: "The concept of divinity and cultural commerce",
-    description: "Ensures your business aligns perfectly with visitor expectations"
+    description: "Ensures your business aligns perfectly with visitor expectations",
+    customImage: "https://res.cloudinary.com/dadfpmrat/image/upload/v1763823352/boost_to_sales_m8gc7f.png"
   }
 ];
 
@@ -215,9 +219,19 @@ const LocationFootfallPage = () => {
                       <motion.div
                         whileHover={{ rotate: 360 }}
                         transition={{ duration: 0.6 }}
-                        className="flex-shrink-0 w-14 h-14 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 backdrop-blur-sm border border-white/30 flex items-center justify-center"
+                        className="flex-shrink-0"
                       >
-                        <Icon className="h-7 w-7 text-primary" />
+                        {stat.customImage ? (
+                          <img
+                            src={stat.customImage}
+                            alt={stat.title}
+                            className="w-14 h-14 object-contain rounded-full"
+                          />
+                        ) : (
+                          <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 backdrop-blur-sm border border-white/30 flex items-center justify-center">
+                            <Icon className="h-7 w-7 text-primary" />
+                          </div>
+                        )}
                       </motion.div>
                       <div className="flex-1">
                         <h3 className="text-xl font-bold text-secondary mb-2">

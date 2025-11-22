@@ -7,9 +7,9 @@ import { motion } from "framer-motion";
 import { fadeInDown, scaleIn, staggerContainer } from "@/lib/animations";
 
 const categories = [
-  { icon: Scroll, title: "Puja Samagri Shops", description: "Complete spiritual essentials" },
-  { icon: Image, title: "Idols & Paintings", description: "Divine artistry and craftsmanship" },
-  { icon: Shirt, title: "Ethnic Apparel", description: "Traditional wear and fabrics" }
+  { icon: Scroll, title: "Puja Samagri Shops", description: "Complete spiritual essentials", customImage: "https://res.cloudinary.com/dadfpmrat/image/upload/v1763821534/puja_samgri_a0ifxz.png" },
+  { icon: Image, title: "Idols & Paintings", description: "Divine artistry and craftsmanship", customImage: "https://res.cloudinary.com/dadfpmrat/image/upload/v1763821632/idols_luv8ky.png" },
+  { icon: Shirt, title: "Ethnic Apparel", description: "Traditional wear and fabrics", customImage: "https://res.cloudinary.com/dadfpmrat/image/upload/v1763821756/ethnic_pmar9h.png" }
 ];
 
 const RetailCategories = () => {
@@ -72,16 +72,20 @@ const RetailCategories = () => {
                     <motion.div whileHover={{ y: -8 }} transition={{ duration: 0.3 }}>
                       <CardContent className="p-8 text-center space-y-4">
                         <motion.div
-                          className={`inline-flex items-center justify-center w-16 h-16 rounded-full transition-all duration-300 ${
-                            hoveredIndex === index
-                              ? 'divine-gradient scale-110'
-                              : 'bg-muted'
-                          }`}
+                          className="inline-flex items-center justify-center mb-4"
                           whileHover={{ scale: 1.1 }}
                         >
-                          <Icon className={`h-8 w-8 transition-colors duration-300 ${
-                            hoveredIndex === index ? 'text-primary-foreground' : 'text-primary'
-                          }`} />
+                          {category.customImage ? (
+                            <img
+                              src={category.customImage}
+                              alt={category.title}
+                              className="h-16 w-16 object-contain rounded-full"
+                            />
+                          ) : (
+                            <Icon className={`h-8 w-8 transition-colors duration-300 ${
+                              hoveredIndex === index ? 'text-primary-foreground' : 'text-primary'
+                            }`} />
+                          )}
                         </motion.div>
                         <h3 className="text-xl font-bold text-secondary group-hover:text-primary transition-colors">
                           {category.title}
