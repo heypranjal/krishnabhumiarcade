@@ -143,7 +143,7 @@ const LocationFootfallPage = () => {
       <div className="absolute inset-0 bg-background/60 backdrop-blur-sm" />
 
       {/* Hero Section */}
-      <section className="relative h-[70vh] flex items-center justify-center overflow-hidden bg-secondary/80 backdrop-blur-md">
+      <section className="relative h-[50vh] sm:h-[60vh] md:h-[70vh] flex items-center justify-center overflow-hidden bg-secondary/80 backdrop-blur-md">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
@@ -153,28 +153,30 @@ const LocationFootfallPage = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
         </div>
 
-        <Link to="/" className="absolute top-8 left-4 md:left-8 z-20">
+        <Link to="/" className="absolute top-4 sm:top-6 md:top-8 left-4 md:left-8 z-20">
           <Button
             variant="ghost"
-            className="text-white hover:text-white hover:bg-white/20"
+            size="sm"
+            className="text-white hover:text-white hover:bg-white/20 text-sm sm:text-base"
           >
-            <ArrowLeft className="mr-2 h-5 w-5" />
-            Back to Home
+            <ArrowLeft className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 sm:w-5" />
+            <span className="hidden sm:inline">Back to Home</span>
+            <span className="sm:hidden">Back</span>
           </Button>
         </Link>
 
-        <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 font-serif">
+        <div className="relative z-10 text-center px-4 sm:px-6 max-w-5xl mx-auto">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 font-serif leading-tight">
             Location & Footfall
           </h1>
-          <p className="text-xl md:text-2xl text-white/90">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 px-2">
             Discover the strategic advantage of Krishna Bhumi Arcade
           </p>
         </div>
       </section>
 
       {/* Main Content */}
-      <section className="py-20 px-4 relative z-10">
+      <section className="py-12 sm:py-16 md:py-20 px-4 relative z-10">
         <div className="container mx-auto max-w-6xl">
           {/* Introduction */}
           <motion.div
@@ -182,10 +184,10 @@ const LocationFootfallPage = () => {
             whileInView="visible"
             viewport={{ once: false, amount: 0.3 }}
             variants={fadeInDown}
-            className="mb-16 rounded-2xl border border-white/20 backdrop-blur-xl bg-white/30 shadow-2xl"
+            className="mb-12 sm:mb-16 rounded-xl sm:rounded-2xl border border-white/20 backdrop-blur-xl bg-white/30 shadow-2xl"
           >
-            <div className="p-8 md:p-12">
-              <p className="text-lg md:text-xl text-foreground/90 leading-relaxed text-center">
+            <div className="p-6 sm:p-8 md:p-12">
+              <p className="text-base sm:text-lg md:text-xl text-foreground/90 leading-relaxed text-center">
                 Located at the heart of <span className="font-bold text-primary">Shree Vrindavan Dham</span>, on the bustling
                 Main Chhatikara-Vrindavan Road, <span className="font-bold text-secondary">Krishna Bhumi Arcade</span> isn't
                 just a commercial development—it's a <span className="font-semibold text-accent">spiritual and cultural
@@ -202,7 +204,7 @@ const LocationFootfallPage = () => {
             whileInView="visible"
             viewport={{ once: false, amount: 0.2 }}
             variants={staggerContainer}
-            className="grid md:grid-cols-2 gap-8 mb-20"
+            className="grid sm:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16 md:mb-20"
           >
             {stats.map((stat, index) => {
               const Icon = stat.icon;
@@ -212,10 +214,10 @@ const LocationFootfallPage = () => {
                   variants={fadeInUp}
                   whileHover={{ y: -10, scale: 1.02 }}
                   transition={{ duration: 0.3 }}
-                  className="rounded-2xl border border-white/20 backdrop-blur-xl bg-white/30 shadow-2xl hover:shadow-3xl hover:bg-white/40 transition-all duration-300"
+                  className="rounded-xl sm:rounded-2xl border border-white/20 backdrop-blur-xl bg-white/30 shadow-2xl hover:shadow-3xl hover:bg-white/40 transition-all duration-300"
                 >
-                  <div className="p-8">
-                    <div className="flex items-start space-x-4">
+                  <div className="p-6 sm:p-8">
+                    <div className="flex items-start space-x-3 sm:space-x-4">
                       <motion.div
                         whileHover={{ rotate: 360 }}
                         transition={{ duration: 0.6 }}
@@ -225,22 +227,22 @@ const LocationFootfallPage = () => {
                           <img
                             src={stat.customImage}
                             alt={stat.title}
-                            className="w-14 h-14 object-contain rounded-full"
+                            className="w-12 h-12 sm:w-14 sm:h-14 object-contain rounded-full"
                           />
                         ) : (
-                          <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 backdrop-blur-sm border border-white/30 flex items-center justify-center">
-                            <Icon className="h-7 w-7 text-primary" />
+                          <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 backdrop-blur-sm border border-white/30 flex items-center justify-center">
+                            <Icon className="h-6 w-6 sm:h-7 sm:w-7 text-primary" />
                           </div>
                         )}
                       </motion.div>
                       <div className="flex-1">
-                        <h3 className="text-xl font-bold text-secondary mb-2">
+                        <h3 className="text-lg sm:text-xl font-bold text-secondary mb-2">
                           {stat.title}
                         </h3>
-                        <p className="text-base font-medium text-foreground/80 mb-2">
+                        <p className="text-sm sm:text-base font-medium text-foreground/80 mb-2">
                           {stat.subtitle}
                         </p>
-                        <p className="text-sm text-muted-foreground">
+                        <p className="text-xs sm:text-sm text-muted-foreground">
                           {stat.description}
                         </p>
                       </div>
@@ -257,39 +259,38 @@ const LocationFootfallPage = () => {
       <AnimatedLocationMap />
 
       {/* Main Content */}
-      <section className="py-20 px-4 relative z-10">
+      <section className="py-12 sm:py-16 md:py-20 px-4 relative z-10">
         <div className="container mx-auto max-w-6xl">
 
           {/* Market Size */}
           <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
-            variants={fadeInDown}
-            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.1, margin: "50px" }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-8 sm:mb-10 md:mb-12"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-4 font-serif">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-secondary mb-3 sm:mb-4 font-serif px-4">
               Market Opportunity
             </h2>
-            <div className="w-24 h-1 bg-primary mx-auto" />
+            <div className="w-20 sm:w-24 h-1 bg-primary mx-auto" />
           </motion.div>
 
           <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
-            variants={scaleIn}
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: false, amount: 0.2, margin: "50px" }}
+            transition={{ duration: 0.5 }}
             whileHover={{ scale: 1.03 }}
-            transition={{ duration: 0.3 }}
-            className="mb-20 rounded-2xl border border-amber-400/30 backdrop-blur-xl bg-gradient-to-br from-amber-600/90 to-orange-600/90 shadow-2xl"
+            className="mb-12 sm:mb-16 md:mb-20 rounded-xl sm:rounded-2xl border border-amber-400/30 backdrop-blur-xl bg-gradient-to-br from-amber-600/90 to-orange-600/90 shadow-2xl"
           >
-            <div className="p-12 text-white text-center">
+            <div className="p-6 sm:p-8 md:p-12 text-white text-center">
               <motion.h3
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: false }}
                 transition={{ delay: 0.2 }}
-                className="text-2xl md:text-3xl font-bold mb-4 text-white/95"
+                className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4 text-white/95 px-2"
               >
                 Indian Spiritual Market Size*
               </motion.h3>
@@ -298,7 +299,7 @@ const LocationFootfallPage = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: false }}
                 transition={{ delay: 0.4, duration: 0.6 }}
-                className="text-5xl md:text-6xl font-extrabold mb-3"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-2 sm:mb-3"
               >
                 $58.56 BILLION
               </motion.p>
@@ -307,7 +308,7 @@ const LocationFootfallPage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: false }}
                 transition={{ delay: 0.6 }}
-                className="text-lg md:text-xl text-white/95"
+                className="text-base sm:text-lg md:text-xl text-white/95"
               >
                 Products | Tech | Tourism
               </motion.p>
@@ -319,82 +320,78 @@ const LocationFootfallPage = () => {
             id="retail-opportunities"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
+            viewport={{ once: false, amount: 0.1 }}
             variants={fadeInDown}
-            className="text-center mb-16 scroll-mt-20"
+            className="text-center mb-12 sm:mb-14 md:mb-16 scroll-mt-20"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-4 font-serif">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-secondary mb-3 sm:mb-4 font-serif px-4 leading-tight">
               Retail Opportunities at Krishna Bhumi Arcade
             </h2>
-            <div className="w-24 h-1 bg-primary mx-auto mb-6" />
-            <p className="text-lg text-foreground/80 max-w-4xl mx-auto">
+            <div className="w-20 sm:w-24 h-1 bg-primary mx-auto mb-4 sm:mb-6" />
+            <p className="text-base sm:text-lg text-foreground/80 max-w-4xl mx-auto px-4">
               Discover diverse retail categories designed to serve millions of devotees and visitors
             </p>
           </motion.div>
 
           {/* Shop Categories */}
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false, amount: 0.1 }}
-            variants={staggerContainer}
-            className="space-y-12"
-          >
+          <div className="space-y-8 sm:space-y-10 md:space-y-12">
             {shopCategories.map((category, index) => (
               <motion.div
                 key={index}
-                variants={index % 2 === 0 ? fadeInLeft : fadeInRight}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false, amount: 0.1, margin: "100px" }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ scale: 1.02, y: -5 }}
-                transition={{ duration: 0.3 }}
-                className="rounded-2xl p-8 md:p-12 border border-white/30 backdrop-blur-2xl shadow-2xl"
+                className="rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-12 border border-white/30 backdrop-blur-2xl shadow-2xl"
                 style={{
                   backgroundColor: `${category.bgColor}70`,
                   backdropFilter: 'blur(30px)',
                   WebkitBackdropFilter: 'blur(30px)'
                 }}
               >
-                <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="grid md:grid-cols-2 gap-6 sm:gap-8 items-center">
                   {index % 2 === 0 ? (
                     <>
                       <motion.div
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.4 }}
-                        className="relative rounded-xl overflow-hidden shadow-xl ring-1 ring-white/20"
+                        className="relative rounded-lg sm:rounded-xl overflow-hidden shadow-xl ring-1 ring-white/20 order-1 md:order-1"
                       >
                         <img
                           src={category.image}
                           alt={category.title}
-                          className="w-full h-80 object-cover"
+                          className="w-full h-48 sm:h-64 md:h-80 object-cover"
                         />
                       </motion.div>
-                      <div>
-                        <h3 className="text-3xl md:text-4xl font-bold text-secondary mb-6 font-serif">
+                      <div className="order-2 md:order-2">
+                        <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-secondary mb-4 sm:mb-6 font-serif leading-tight">
                           {category.title}
                         </h3>
-                        <p className="text-base md:text-lg text-foreground/90 leading-relaxed">
+                        <p className="text-sm sm:text-base md:text-lg text-foreground/90 leading-relaxed">
                           {category.description}
                         </p>
                       </div>
                     </>
                   ) : (
                     <>
-                      <div>
-                        <h3 className="text-3xl md:text-4xl font-bold text-secondary mb-6 font-serif">
+                      <div className="order-2 md:order-1">
+                        <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-secondary mb-4 sm:mb-6 font-serif leading-tight">
                           {category.title}
                         </h3>
-                        <p className="text-base md:text-lg text-foreground/90 leading-relaxed">
+                        <p className="text-sm sm:text-base md:text-lg text-foreground/90 leading-relaxed">
                           {category.description}
                         </p>
                       </div>
                       <motion.div
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.4 }}
-                        className="relative rounded-xl overflow-hidden shadow-xl ring-1 ring-white/20"
+                        className="relative rounded-lg sm:rounded-xl overflow-hidden shadow-xl ring-1 ring-white/20 order-1 md:order-2"
                       >
                         <img
                           src={category.image}
                           alt={category.title}
-                          className="w-full h-80 object-cover"
+                          className="w-full h-48 sm:h-64 md:h-80 object-cover"
                         />
                       </motion.div>
                     </>
@@ -402,15 +399,15 @@ const LocationFootfallPage = () => {
                 </div>
               </motion.div>
             ))}
-          </motion.div>
+          </div>
 
           {/* Sources */}
-          <div className="text-center mt-16">
-            <p className="text-xs text-muted-foreground italic">
+          <div className="text-center mt-12 sm:mt-14 md:mt-16 px-4">
+            <p className="text-xs sm:text-sm text-muted-foreground italic break-words">
               *Sources:<br />
-              https://www.imarc.com/india-religious-spiritual-market<br />
-              https://www.expertmarketresearch.com/reports/indian-religious-and-spiritual-market<br />
-              https://www.reportlinker.com/p06767633/india-spiritual-market-trends-growth-insights
+              <span className="text-[10px] sm:text-xs">https://www.imarc.com/india-religious-spiritual-market</span><br />
+              <span className="text-[10px] sm:text-xs">https://www.expertmarketresearch.com/reports/indian-religious-and-spiritual-market</span><br />
+              <span className="text-[10px] sm:text-xs">https://www.reportlinker.com/p06767633/india-spiritual-market-trends-growth-insights</span>
             </p>
           </div>
         </div>
