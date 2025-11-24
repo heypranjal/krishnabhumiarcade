@@ -14,9 +14,11 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo/Brand */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
-              <Store className="h-6 w-6 text-primary-foreground" />
-            </div>
+            <img
+              src="https://res.cloudinary.com/dadfpmrat/image/upload/v1763967586/Screenshot_2025-11-24_at_12.27.46_PM_japyh3.png"
+              alt="Krishna Bhumi Arcade Logo"
+              className="w-12 h-12 object-contain transition-all duration-300 group-hover:scale-110"
+            />
             <div className="hidden md:block">
               <h1 className="text-xl font-bold text-secondary font-serif">Krishna Bhumi Arcade</h1>
               <p className="text-xs text-muted-foreground">भारत का पहला धार्मिक माल</p>
