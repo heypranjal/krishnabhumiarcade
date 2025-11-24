@@ -292,4 +292,47 @@ All colors MUST be HSL.
   .parallax-fast {
     transition: transform 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
+
+  /* Mobile-specific responsive utilities */
+  @media (max-width: 640px) {
+    html {
+      font-size: 16px;
+    }
+
+    /* Optimize touch targets for mobile */
+    button, a {
+      min-height: 44px;
+      min-width: 44px;
+    }
+
+    /* Prevent horizontal scrolling */
+    body {
+      overflow-x: hidden;
+    }
+
+    /* Better spacing for mobile */
+    .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+
+  /* Tablet optimizations */
+  @media (min-width: 641px) and (max-width: 1024px) {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  /* Smooth scrolling for all devices */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Prevent layout shift */
+  img, video, iframe {
+    max-width: 100%;
+    height: auto;
+  }
 }

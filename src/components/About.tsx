@@ -36,27 +36,27 @@ const About = () => {
           {/* Title */}
           <motion.div
             variants={fadeInDown}
-            className="text-center mb-16"
+            className="text-center mb-12 sm:mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-secondary mb-4 px-4">
               A Destination of Divine Commerce
             </h2>
-            <div className="w-24 h-1 bg-primary mx-auto mb-8" />
+            <div className="w-20 sm:w-24 h-1 bg-primary mx-auto mb-6 sm:mb-8" />
           </motion.div>
 
           {/* Content */}
-          <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+          <div className="grid md:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center mb-12 sm:mb-16 px-4">
             <motion.div
               variants={fadeInLeft}
-              className="space-y-6"
+              className="space-y-4 sm:space-y-6"
             >
-              <p className="text-lg text-foreground/80 leading-relaxed">
+              <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
                 Located at the heart of <span className="font-semibold text-primary">Shree Vrindavan Dham</span>, Krishna Bhumi Arcade is not just a commercial development—it's a spiritual and cultural experience merged with modern business excellence.
               </p>
-              <p className="text-lg text-foreground/80 leading-relaxed">
+              <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
                 Where millions of devotees converge annually, your business finds its divine purpose. This isn't merely retail space—it's a sacred opportunity to serve those seeking spiritual fulfillment while building lasting prosperity.
               </p>
-              <p className="text-lg text-foreground/80 leading-relaxed">
+              <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
                 As <span className="font-semibold text-accent">Vrindavan's 1st IGBC Gold Rated Retail Green Building</span>, we harmonize sustainability with tradition, creating a space where commerce respects culture and nature.
               </p>
             </motion.div>

@@ -59,18 +59,18 @@ const Contact = () => {
           {/* Title */}
           <motion.div
             variants={fadeInDown}
-            className="text-center mb-16"
+            className="text-center mb-12 sm:mb-16 px-4"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-secondary mb-4">
               Seize This Divine Investment Opportunity
             </h2>
-            <div className="w-24 h-1 bg-primary mx-auto mb-6" />
-            <p className="text-xl text-muted-foreground">
+            <div className="w-20 sm:w-24 h-1 bg-primary mx-auto mb-4 sm:mb-6" />
+            <p className="text-lg sm:text-xl text-muted-foreground">
               Connect with us to explore retail opportunities at Krishna Bhumi Arcade
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-2 gap-8 sm:gap-10 md:gap-12 px-4">
             {/* Contact Form */}
             <motion.div variants={fadeInLeft}>
               <Card className="shadow-2xl">
