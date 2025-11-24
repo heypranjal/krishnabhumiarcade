@@ -145,7 +145,7 @@ const ConstructionTimelinePage = () => {
       <div className="absolute inset-0 bg-background/60 backdrop-blur-sm" />
 
       {/* Hero Section */}
-      <section className="relative h-[70vh] flex items-center justify-center overflow-hidden bg-secondary/80 backdrop-blur-md">
+      <section className="relative h-[50vh] sm:h-[60vh] md:h-[70vh] flex items-center justify-center overflow-hidden bg-secondary/80 backdrop-blur-md">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
@@ -155,38 +155,49 @@ const ConstructionTimelinePage = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
         </div>
 
-        <Link to="/" className="absolute top-8 left-4 md:left-8 z-20">
+        <Link to="/" className="absolute top-4 sm:top-6 md:top-8 left-4 md:left-8 z-20">
           <Button
             variant="ghost"
-            className="text-white hover:text-white hover:bg-white/20"
+            size="sm"
+            className="text-white hover:text-white hover:bg-white/20 text-sm sm:text-base"
           >
-            <ArrowLeft className="mr-2 h-5 w-5" />
-            Back to Home
+            <ArrowLeft className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 sm:w-5" />
+            <span className="hidden sm:inline">Back to Home</span>
+            <span className="sm:hidden">Back</span>
           </Button>
         </Link>
 
-        <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 font-serif">
+        <div className="relative z-10 text-center px-4 sm:px-6 max-w-5xl mx-auto">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 font-serif leading-tight">
             Construction Timeline
           </h1>
-          <p className="text-xl md:text-2xl text-white/90">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 px-4">
             Track the progress of Krishna Bhumi Arcade with real-time milestone updates
           </p>
         </div>
       </section>
 
       {/* Timeline Section */}
-      <section className="py-20 px-4 relative z-10">
+      <section className="py-12 sm:py-16 md:py-20 px-4 relative z-10">
         <div className="container mx-auto max-w-6xl">
           {/* Timeline Container */}
           <div className="relative">
-            {/* Vertical Line */}
+            {/* Vertical Line - Hidden on mobile */}
             <motion.div
               initial={{ scaleY: 0 }}
               whileInView={{ scaleY: 1 }}
               viewport={{ once: false, amount: 0.1 }}
               transition={{ duration: 1.5, ease: "easeOut" }}
-              className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-amber-500/30 via-amber-500/50 to-amber-500/30 origin-top"
+              className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-amber-500/30 via-amber-500/50 to-amber-500/30 origin-top"
+            />
+
+            {/* Mobile Vertical Line */}
+            <motion.div
+              initial={{ scaleY: 0 }}
+              whileInView={{ scaleY: 1 }}
+              viewport={{ once: false, amount: 0.1 }}
+              transition={{ duration: 1.5, ease: "easeOut" }}
+              className="md:hidden absolute left-8 w-0.5 h-full bg-gradient-to-b from-amber-500/30 via-amber-500/50 to-amber-500/30 origin-top"
             />
 
             {/* Milestones */}
@@ -195,25 +206,25 @@ const ConstructionTimelinePage = () => {
               whileInView="visible"
               viewport={{ once: false, amount: 0.1 }}
               variants={staggerContainer}
-              className="space-y-16"
+              className="space-y-12 sm:space-y-16"
             >
               {milestones.map((milestone, index) => (
                 <motion.div
                   key={milestone.id}
                   variants={index % 2 === 0 ? fadeInLeft : fadeInRight}
                   className={`relative flex items-center ${
-                    index % 2 === 0 ? "flex-row" : "flex-row-reverse"
-                  }`}
+                    index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                  } flex-row`}
                 >
                   {/* Timeline Card */}
-                  <div className={`w-5/12 ${index % 2 === 0 ? "pr-12 text-right" : "pl-12 text-left"}`}>
+                  <div className={`w-full md:w-5/12 ${index % 2 === 0 ? "md:pr-12 md:text-right" : "md:pl-12 md:text-left"} pl-16 md:pl-0`}>
                     <motion.div
                       whileHover={{ y: -10, scale: 1.02 }}
                       transition={{ duration: 0.3 }}
-                      className="group relative rounded-2xl p-8 border border-white/20 backdrop-blur-xl bg-white/30 shadow-2xl hover:shadow-3xl hover:bg-white/40 transition-all duration-300"
+                      className="group relative rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 border border-white/20 backdrop-blur-xl bg-white/30 shadow-2xl hover:shadow-3xl hover:bg-white/40 transition-all duration-300"
                     >
                       {/* Status Badge */}
-                      <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full mb-4 ${
+                      <div className={`inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full mb-3 sm:mb-4 text-left md:${
                         index % 2 === 0 ? "float-right" : "float-left"
                       }`}
                       style={{
@@ -233,21 +244,21 @@ const ConstructionTimelinePage = () => {
                       <div className="clear-both" />
 
                       {/* Icon */}
-                      <div className={`text-5xl mb-4 ${index % 2 === 0 ? "text-right" : "text-left"}`}>
+                      <div className={`text-3xl sm:text-4xl md:text-5xl mb-3 sm:mb-4 text-left md:${index % 2 === 0 ? "text-right" : "text-left"}`}>
                         <span className="inline-block filter drop-shadow-[0_0_15px_rgba(251,191,36,0.5)]">
                           {milestone.icon}
                         </span>
                       </div>
 
                       {/* Title & Date */}
-                      <h3 className="text-2xl font-bold text-secondary mb-2">{milestone.title}</h3>
-                      <p className="text-primary font-medium mb-4 text-sm tracking-wide">{milestone.date}</p>
+                      <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-secondary mb-2">{milestone.title}</h3>
+                      <p className="text-primary font-medium mb-3 sm:mb-4 text-xs sm:text-sm tracking-wide">{milestone.date}</p>
 
                       {/* Description */}
-                      <p className="text-foreground/80 leading-relaxed mb-6">{milestone.description}</p>
+                      <p className="text-sm sm:text-base text-foreground/80 leading-relaxed mb-4 sm:mb-6">{milestone.description}</p>
 
                       {/* Progress Bar */}
-                      <div className="mb-6">
+                      <div className="mb-4 sm:mb-6">
                         <div className="flex justify-between items-center mb-2">
                           <span className="text-xs text-muted-foreground font-medium">Progress</span>
                           <span className="text-sm text-primary font-bold">{milestone.progress}%</span>
@@ -261,7 +272,7 @@ const ConstructionTimelinePage = () => {
                       </div>
 
                       {/* Photos */}
-                      <div className="grid grid-cols-3 gap-3">
+                      <div className="grid grid-cols-3 gap-2 sm:gap-3">
                         {milestone.photos.map((photo, photoIndex) => (
                           <motion.div
                             key={photoIndex}
@@ -282,7 +293,7 @@ const ConstructionTimelinePage = () => {
                   </div>
 
                   {/* Center Icon Badge */}
-                  <div className="absolute left-1/2 transform -translate-x-1/2 z-10">
+                  <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 z-10">
                     <motion.div
                       initial={{ scale: 0 }}
                       whileInView={{ scale: 1 }}
@@ -290,8 +301,8 @@ const ConstructionTimelinePage = () => {
                       transition={{ delay: 0.3, type: "spring", stiffness: 200 }}
                       className="relative"
                     >
-                      <div className="w-16 h-16 rounded-full bg-white/90 backdrop-blur-sm border-4 border-primary shadow-xl flex items-center justify-center">
-                        <span className="text-2xl">
+                      <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full bg-white/90 backdrop-blur-sm border-2 sm:border-3 md:border-4 border-primary shadow-xl flex items-center justify-center">
+                        <span className="text-lg sm:text-xl md:text-2xl">
                           {milestone.icon}
                         </span>
                       </div>
@@ -302,8 +313,8 @@ const ConstructionTimelinePage = () => {
                     </motion.div>
                   </div>
 
-                  {/* Empty Space */}
-                  <div className="w-5/12" />
+                  {/* Empty Space - Hidden on mobile */}
+                  <div className="hidden md:block md:w-5/12" />
                 </motion.div>
               ))}
             </motion.div>
@@ -315,17 +326,17 @@ const ConstructionTimelinePage = () => {
             whileInView="visible"
             viewport={{ once: false, amount: 0.3 }}
             variants={fadeInUp}
-            className="mt-24 rounded-2xl p-12 border border-white/20 backdrop-blur-xl bg-white/30 shadow-2xl"
+            className="mt-16 sm:mt-20 md:mt-24 rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-12 border border-white/20 backdrop-blur-xl bg-white/30 shadow-2xl"
           >
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false }}
               transition={{ delay: 0.2 }}
-              className="text-center mb-8"
+              className="text-center mb-6 sm:mb-8"
             >
-              <h2 className="text-4xl font-bold text-secondary mb-4 font-serif">Overall Project Progress</h2>
-              <p className="text-foreground/80 text-lg">Krishna Bhumi Arcade Construction Status</p>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-secondary mb-3 sm:mb-4 font-serif px-4">Overall Project Progress</h2>
+              <p className="text-foreground/80 text-sm sm:text-base md:text-lg">Krishna Bhumi Arcade Construction Status</p>
             </motion.div>
 
             <div className="max-w-2xl mx-auto">
@@ -335,11 +346,11 @@ const ConstructionTimelinePage = () => {
                 viewport={{ once: false }}
                 transition={{ delay: 0.4 }}
               >
-                <div className="flex justify-between items-center mb-4">
-                  <span className="text-foreground/80 font-medium">Total Completion</span>
-                  <span className="text-3xl text-primary font-bold">55%</span>
+                <div className="flex justify-between items-center mb-3 sm:mb-4">
+                  <span className="text-foreground/80 font-medium text-sm sm:text-base">Total Completion</span>
+                  <span className="text-2xl sm:text-3xl text-primary font-bold">55%</span>
                 </div>
-                <div className="h-6 bg-white/20 rounded-full overflow-hidden">
+                <div className="h-4 sm:h-5 md:h-6 bg-white/20 rounded-full overflow-hidden">
                   <motion.div
                     initial={{ width: 0 }}
                     whileInView={{ width: "55%" }}
@@ -355,7 +366,7 @@ const ConstructionTimelinePage = () => {
                 whileInView="visible"
                 viewport={{ once: false }}
                 variants={staggerContainer}
-                className="grid grid-cols-3 gap-6 mt-12"
+                className="grid grid-cols-3 gap-4 sm:gap-6 mt-8 sm:mt-10 md:mt-12"
               >
                 <motion.div
                   variants={scaleIn}
@@ -363,8 +374,8 @@ const ConstructionTimelinePage = () => {
                   transition={{ duration: 0.3 }}
                   className="text-center"
                 >
-                  <div className="text-3xl font-bold text-emerald-500 mb-2">3</div>
-                  <div className="text-muted-foreground text-sm">Completed</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-emerald-500 mb-1 sm:mb-2">3</div>
+                  <div className="text-muted-foreground text-xs sm:text-sm">Completed</div>
                 </motion.div>
                 <motion.div
                   variants={scaleIn}
@@ -372,8 +383,8 @@ const ConstructionTimelinePage = () => {
                   transition={{ duration: 0.3 }}
                   className="text-center"
                 >
-                  <div className="text-3xl font-bold text-amber-500 mb-2">2</div>
-                  <div className="text-muted-foreground text-sm">In Progress</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-amber-500 mb-1 sm:mb-2">2</div>
+                  <div className="text-muted-foreground text-xs sm:text-sm">In Progress</div>
                 </motion.div>
                 <motion.div
                   variants={scaleIn}
@@ -381,8 +392,8 @@ const ConstructionTimelinePage = () => {
                   transition={{ duration: 0.3 }}
                   className="text-center"
                 >
-                  <div className="text-3xl font-bold text-slate-400 mb-2">2</div>
-                  <div className="text-muted-foreground text-sm">Upcoming</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-slate-400 mb-1 sm:mb-2">2</div>
+                  <div className="text-muted-foreground text-xs sm:text-sm">Upcoming</div>
                 </motion.div>
               </motion.div>
             </div>
