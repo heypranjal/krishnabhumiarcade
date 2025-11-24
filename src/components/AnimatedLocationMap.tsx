@@ -66,15 +66,17 @@ const AnimatedLocationMap = () => {
           ref={mapRef}
           className="relative rounded-xl border border-white/20 backdrop-blur-xl bg-white/30 shadow-2xl overflow-hidden max-w-4xl mx-auto"
         >
-          {/* Map Image with Overlay */}
+          {/* Google Maps Embed */}
           <div className="relative aspect-[16/9]">
-            <img
-              src="https://i.ibb.co/8H0kJdW/Screenshot-2025-11-19-at-1-03-10-PM.png"
-              alt="Krishna Bhumi Arcade Location Map"
-              className="w-full h-full object-contain bg-gradient-to-br from-amber-50/50 to-orange-50/50"
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3536.8380315580034!2d77.644133475515!3d27.56753677626298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39736d000ede6b01%3A0x3912bf74731e897e!2sKrishnabhumi%20Arcade!5e0!3m2!1sen!2sin!4v1763966742790!5m2!1sen!2sin"
+              className="w-full h-full"
+              style={{ border: 0 }}
+              allowFullScreen
               loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Krishna Bhumi Arcade Location"
             />
-
           </div>
 
           {/* Key Connectivity Highlights */}

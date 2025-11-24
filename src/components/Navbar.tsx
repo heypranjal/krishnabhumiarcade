@@ -25,14 +25,16 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-2">
-            <Button
-              size="sm"
-              variant="ghost"
-              className="text-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300"
-            >
-              <Store className="mr-2 h-4 w-4" />
-              View Shops
-            </Button>
+            <Link to="/location-footfall#retail-opportunities">
+              <Button
+                size="sm"
+                variant="ghost"
+                className="text-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300"
+              >
+                <Store className="mr-2 h-4 w-4" />
+                View Shops
+              </Button>
+            </Link>
             <Link to="/location-footfall">
               <Button
                 size="sm"
@@ -67,13 +69,15 @@ const Navbar = () => {
                 Brochure
               </Button>
             </a>
-            <Button
-              size="sm"
-              className="divine-gradient text-primary-foreground hover:shadow-lg transition-all duration-300 hover:scale-105 ml-2"
-            >
-              <Phone className="mr-2 h-4 w-4" />
-              Contact Us
-            </Button>
+            <a href="/#contact">
+              <Button
+                size="sm"
+                className="divine-gradient text-primary-foreground hover:shadow-lg transition-all duration-300 hover:scale-105 ml-2"
+              >
+                <Phone className="mr-2 h-4 w-4" />
+                Contact Us
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -90,15 +94,16 @@ const Navbar = () => {
         {isMenuOpen && (
           <div className="lg:hidden py-4 border-t border-white/10 bg-background/95 backdrop-blur-xl">
             <div className="flex flex-col space-y-2">
-              <Button
-                size="sm"
-                variant="ghost"
-                className="justify-start text-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300"
-                onClick={toggleMenu}
-              >
-                <Store className="mr-2 h-4 w-4" />
-                View Shops
-              </Button>
+              <Link to="/location-footfall#retail-opportunities" onClick={toggleMenu}>
+                <Button
+                  size="sm"
+                  variant="ghost"
+                  className="w-full justify-start text-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300"
+                >
+                  <Store className="mr-2 h-4 w-4" />
+                  View Shops
+                </Button>
+              </Link>
               <Link to="/location-footfall" onClick={toggleMenu}>
                 <Button
                   size="sm"
@@ -134,14 +139,15 @@ const Navbar = () => {
                   Download Brochure
                 </Button>
               </a>
-              <Button
-                size="sm"
-                className="divine-gradient text-primary-foreground hover:shadow-lg transition-all duration-300"
-                onClick={toggleMenu}
-              >
-                <Phone className="mr-2 h-4 w-4" />
-                Contact Us
-              </Button>
+              <a href="/#contact" onClick={toggleMenu}>
+                <Button
+                  size="sm"
+                  className="w-full divine-gradient text-primary-foreground hover:shadow-lg transition-all duration-300"
+                >
+                  <Phone className="mr-2 h-4 w-4" />
+                  Contact Us
+                </Button>
+              </a>
             </div>
           </div>
         )}

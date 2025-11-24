@@ -61,7 +61,7 @@ const LocationAdvantage = () => {
                   className="h-96 w-full bg-muted relative"
                 >
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3543.6776895!2d77.6759!3d27.5808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjfCsDM0JzUxLjAiTiA3N8KwNDAnMzMuMiJF!5e0!3m2!1sen!2sin!4v1234567890"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3536.8380315580034!2d77.644133475515!3d27.56753677626298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39736d000ede6b01%3A0x3912bf74731e897e!2sKrishnabhumi%20Arcade!5e0!3m2!1sen!2sin!4v1763966742790!5m2!1sen!2sin"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}

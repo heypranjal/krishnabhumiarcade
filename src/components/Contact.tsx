@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
+import { Phone, Mail, MapPin, Instagram, Linkedin, Youtube } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { motion } from "framer-motion";
@@ -28,7 +28,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="py-20 bg-transparent relative overflow-hidden">
+    <section id="contact" className="py-20 bg-transparent relative overflow-hidden scroll-mt-20">
       {/* Parallax Decorative Elements */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -205,16 +205,9 @@ const Contact = () => {
                   <h3 className="font-semibold text-lg text-secondary mb-4">Connect With Us</h3>
                   <div className="flex space-x-4">
                     <motion.a
-                      href="#"
-                      whileHover={{ scale: 1.1, rotate: 5 }}
-                      whileTap={{ scale: 0.9 }}
-                      className="w-10 h-10 rounded-full divine-gradient flex items-center justify-center"
-                      aria-label="Facebook"
-                    >
-                      <Facebook className="h-5 w-5 text-primary-foreground" />
-                    </motion.a>
-                    <motion.a
-                      href="#"
+                      href="https://www.instagram.com/krishnabhumiarcade?igsh=dGdhOHkyMW92eDNn"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       whileHover={{ scale: 1.1, rotate: 5 }}
                       whileTap={{ scale: 0.9 }}
                       className="w-10 h-10 rounded-full divine-gradient flex items-center justify-center"
@@ -223,13 +216,26 @@ const Contact = () => {
                       <Instagram className="h-5 w-5 text-primary-foreground" />
                     </motion.a>
                     <motion.a
-                      href="#"
+                      href="https://www.linkedin.com/posts/krishna-bhumi-seva-1_atratfassatcataatrate-aslatfattatpaszatjateatkatb-activity-7396575414023831552-OO96?utm_source=share&utm_medium=member_android&rcm=ACoAADkxKnkBT6m1Z_OeZhtCiUEArXS-ELUzW6Y"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       whileHover={{ scale: 1.1, rotate: 5 }}
                       whileTap={{ scale: 0.9 }}
                       className="w-10 h-10 rounded-full divine-gradient flex items-center justify-center"
                       aria-label="LinkedIn"
                     >
                       <Linkedin className="h-5 w-5 text-primary-foreground" />
+                    </motion.a>
+                    <motion.a
+                      href="https://youtube.com/@krishnabhumiinfinity?si=L9kCM-EEmAWOhXz0"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ scale: 1.1, rotate: 5 }}
+                      whileTap={{ scale: 0.9 }}
+                      className="w-10 h-10 rounded-full divine-gradient flex items-center justify-center"
+                      aria-label="YouTube"
+                    >
+                      <Youtube className="h-5 w-5 text-primary-foreground" />
                     </motion.a>
                   </div>
                 </CardContent>
