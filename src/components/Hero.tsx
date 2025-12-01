@@ -5,7 +5,7 @@ const Hero = () => {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url(https://i.ibb.co/Xk866Hvh/hero111.webp)`,
+          backgroundImage: `url(https://res.cloudinary.com/drsb05yxo/image/upload/v1764566610/herokba_je3qmy.webp)`,
           imageRendering: 'high-quality'
         }}
       >

@@ -9,21 +9,21 @@ const features = [
     title: "Strategic Location",
     description: "Gateway to Vrindavan's most sacred landmarks and cultural destinations",
     color: "text-primary",
-    customImage: "https://res.cloudinary.com/dadfpmrat/image/upload/v1763820336/strategic_location_fhgony.png"
+    customImage: "https://res.cloudinary.com/drsb05yxo/image/upload/v1764418664/strategic_location_fhgony_hd41zk.png"
   },
   {
     icon: Users,
     title: "High Footfall",
     description: "Proximity to Prem Mandir, ISKCON Temple & Banke Bihari Temple brings millions annually",
     color: "text-accent",
-    customImage: "https://res.cloudinary.com/dadfpmrat/image/upload/v1763820756/footfall_fk1zpj.png"
+    customImage: "https://res.cloudinary.com/drsb05yxo/image/upload/v1764418656/footfall_fk1zpj_oigrih.png"
   },
   {
     icon: Recycle,
     title: "Sustainability",
     description: "Vrindavan's 1st IGBC Gold Rated Retail Green Building - eco-conscious excellence",
     color: "text-green-600",
-    customImage: "https://res.cloudinary.com/dadfpmrat/image/upload/v1763820751/sustain_oamqen.png"
+    customImage: "https://res.cloudinary.com/drsb05yxo/image/upload/v1764418663/sustain_oamqen_cwrsny.png"
   }
 ];
 

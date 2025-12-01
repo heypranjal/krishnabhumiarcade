@@ -7,9 +7,9 @@ import { motion } from "framer-motion";
 import { fadeInDown, scaleIn, staggerContainer } from "@/lib/animations";
 
 const categories = [
-  { icon: Scroll, title: "Puja Samagri Shops", description: "Complete spiritual essentials", customImage: "https://res.cloudinary.com/dadfpmrat/image/upload/v1763821534/puja_samgri_a0ifxz.png" },
-  { icon: Image, title: "Idols & Paintings", description: "Divine artistry and craftsmanship", customImage: "https://res.cloudinary.com/dadfpmrat/image/upload/v1763821632/idols_luv8ky.png" },
-  { icon: Shirt, title: "Ethnic Apparel", description: "Traditional wear and fabrics", customImage: "https://res.cloudinary.com/dadfpmrat/image/upload/v1763821756/ethnic_pmar9h.png" }
+  { icon: Scroll, title: "Puja Samagri Shops", description: "Complete spiritual essentials", customImage: "https://res.cloudinary.com/drsb05yxo/image/upload/v1764418662/puja_samgri_a0ifxz_lqbkty.png" },
+  { icon: Image, title: "Idols & Paintings", description: "Divine artistry and craftsmanship", customImage: "https://res.cloudinary.com/drsb05yxo/image/upload/v1764418658/idols_luv8ky_klbimg.png" },
+  { icon: Shirt, title: "Ethnic Apparel", description: "Traditional wear and fabrics", customImage: "https://res.cloudinary.com/drsb05yxo/image/upload/v1764418655/ethnic_pmar9h_zuydj1.png" }
 ];
 
 const RetailCategories = () => {

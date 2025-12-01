@@ -41,91 +41,91 @@ const stats = [
 const shopCategories = [
   {
     title: "Puja Samagri Shops",
-    image: "https://res.cloudinary.com/dadfpmrat/image/upload/v1763817598/Screenshot_2025-11-22_at_6.49.39_PM_xy8yjf.png",
+    image: "https://res.cloudinary.com/drsb05yxo/image/upload/v1764418674/Puja_Samagri_Shops_ekpjk3.png",
     description: "At Krishna Bhumi Arcade, every shopkeeper gets the advantage of being at the heart of Shree Vrindavan Dham's spiritual and cultural economy. With a perfect blend of demand-driven footfall—from domestic pilgrims to international and domestic travelers—whether you're looking for authentic Bhog samagri or discounted offerings in a modern, air-conditioned retail space, your store is positioned to serve both.",
     bgColor: "#fff7ed"
   },
   {
     title: "Idols & Religious Paintings Shops",
-    image: "https://res.cloudinary.com/dadfpmrat/image/upload/v1763817962/Screenshot_2025-11-22_at_6.55.50_PM_ux9i68.png",
+    image: "https://res.cloudinary.com/drsb05yxo/image/upload/v1764418656/idols_shops_hikajg.png",
     description: "Shops at Krishna Bhumi Arcade aren't just retail spaces—they're business gateways to Shree Vrindavan Dham's thriving spiritual economy. By investing here, shopkeepers tap into a steady stream of devotees, tourists, and global pilgrims seeking authentic Hindu religious arts, crafts, and puja essentials.",
     bgColor: "#fffbeb"
   },
   {
     title: "Poshak & Shringar Shops",
-    image: "https://res.cloudinary.com/dadfpmrat/image/upload/v1763818086/Screenshot_2025-11-22_at_6.57.53_PM_biicdq.png",
+    image: "https://res.cloudinary.com/drsb05yxo/image/upload/v1764418660/Poshak_Shringar_Shops_y4eiu9.png",
     description: "Deity-ready poshaks & shringar, inspired by Hindu traditions across different states and regions of India. Krishna Bhumi Arcade will house specialized boutiques and brands which will cater to the cultural needs of international and domestic pilgrims alike.",
     bgColor: "#fdf2f8"
   },
   {
     title: "Ethnic Apparels Shops",
-    image: "https://res.cloudinary.com/dadfpmrat/image/upload/v1763818172/Screenshot_2025-11-22_at_6.59.18_PM_oq1vco.png",
+    image: "https://res.cloudinary.com/drsb05yxo/image/upload/v1764418653/Ethnic_Apparels_Shops_rdfroz.png",
     description: "Ethnic apparel shops at Krishna Bhumi Arcade promise shopkeepers a thriving business opportunity in the heart of Shree Vrindavan Dham's devotional and cultural hub. With constant demand for sarees, kurtas, lehengas, and festive wear during pujas, festivals, and spiritual occasions.",
     bgColor: "#eff6ff"
   },
   {
     title: "Artisan Crafted Jewelry Shops",
-    image: "https://res.cloudinary.com/dadfpmrat/image/upload/v1763818240/Screenshot_2025-11-22_at_7.00.24_PM_skczzy.png",
+    image: "https://res.cloudinary.com/drsb05yxo/image/upload/v1764418651/Artisan_Crafted_Jewelry_Shops_aiev8r.png",
     description: "Jewellery shops at Krishna Bhumi Arcade offer shopkeepers a unique opportunity to serve both spiritual and lifestyle needs in Shree Vrindavan Dham. From traditional deity shringar to jewellery for devotees, every piece carries deep cultural meaning.",
     bgColor: "#fefce8"
   },
   {
     title: "Itra / Fragrances",
-    image: "https://res.cloudinary.com/dadfpmrat/image/upload/v1763818307/Screenshot_2025-11-22_at_7.01.32_PM_i7jkro.png",
+    image: "https://res.cloudinary.com/drsb05yxo/image/upload/v1764418657/Itra_and_fragrance_shops_vtsxiw.png",
     description: "Itra and fragrance shops at Krishna Bhumi Arcade give shopkeepers the chance to tap into Shree Vrindavan Dham's age-old tradition of sacred scents. With devotees and global pilgrims constantly seeking pure itras, artisanal perfumes, and exotic oils.",
     bgColor: "#faf5ff"
   },
   {
     title: "Incense Paradise",
-    image: "https://res.cloudinary.com/dadfpmrat/image/upload/v1763818378/Screenshot_2025-11-22_at_7.02.47_PM_lvw4ci.png",
+    image: "https://res.cloudinary.com/drsb05yxo/image/upload/v1764418657/Incense_Paradise_mxpglv.png",
     description: "For shopkeepers, incense shops at Krishna Bhumi Arcade guarantee a business rooted in devotion and daily need. With high demand for incense sticks, dhoop, camphor, and puja fragrances from devotees and pilgrims.",
     bgColor: "#f0fdf4"
   },
   {
     title: "Prasadam Centres",
-    image: "https://res.cloudinary.com/dadfpmrat/image/upload/v1763818467/Screenshot_2025-11-22_at_7.04.13_PM_nvplge.png",
+    image: "https://res.cloudinary.com/drsb05yxo/image/upload/v1764418660/Prasadam_Centres_sfjr9q.png",
     description: "Prasadam is more than food—it's a blessing, and that makes it a high-demand retail opportunity. At Krishna Bhumi Arcade, shopkeepers can tap into the devotional buying habits of pilgrims, devotees, and tourists who constantly seek the divine prasadam.",
     bgColor: "#fff7ed"
   },
   {
     title: "Food Court",
-    image: "https://res.cloudinary.com/dadfpmrat/image/upload/v1763818534/Screenshot_2025-11-22_at_7.05.20_PM_d6rltb.png",
+    image: "https://res.cloudinary.com/drsb05yxo/image/upload/v1764418655/food_court_vq2m4t.png",
     description: "A vibrant food court at Krishna Bhumi Arcade gives shopkeepers the chance to serve Shree Vrindavan Dham's culinary heritage to thousands of devotees and tourists daily. From chaats to sweets like peda and jalebi.",
     bgColor: "#fef2f2"
   },
   {
     title: "Authentic Snacks Shops",
-    image: "https://res.cloudinary.com/dadfpmrat/image/upload/v1763818600/Screenshot_2025-11-22_at_7.06.23_PM_dmgcph.png",
+    image: "https://res.cloudinary.com/drsb05yxo/image/upload/v1764418651/authentic_snacks_shops_nvk0m1.png",
     description: "Snack shops at Krishna Bhumi Arcade offer a golden opportunity for shopkeepers to sell timeless Bhuj delicacies. From crispy savouries to traditional sweets, the demand for packaged and fresh snacks as gifts and takeaways ensures a strong revenue stream.",
     bgColor: "#fefce8"
   },
   {
     title: "Music Stores",
-    image: "https://res.cloudinary.com/dadfpmrat/image/upload/v1763818683/Screenshot_2025-11-22_at_7.07.45_PM_cjfjky.png",
+    image: "https://res.cloudinary.com/drsb05yxo/image/upload/v1764418660/music_instruments_shop_fvntfc.png",
     description: "Music stores at Krishna Bhumi Arcade offer shopkeepers a niche yet highly relevant business. Pilgrims and tourists consistently seek devotional tracks, bhajans, flutes, tablas, and cultural music that connect them to Krishna's leela.",
     bgColor: "#eef2ff"
   },
   {
     title: "Divine Bookshops",
-    image: "https://res.cloudinary.com/dadfpmrat/image/upload/v1763818717/Screenshot_2025-11-22_at_7.08.25_PM_nfvqnn.png",
+    image: "https://res.cloudinary.com/drsb05yxo/image/upload/v1764418660/music_instruments_shop_fvntfc.png",
     description: "Bookshops at Krishna Bhumi Arcade offer shopkeepers a unique niche—selling sacred texts, philosophical works, and devotional literature. With pilgrims, scholars, and cultural tourists flocking to Shree Vrindavan for spiritual knowledge.",
     bgColor: "#f0fdfa"
   },
   {
     title: "Wellness and Healthy Lifestyle Shops",
-    image: "https://res.cloudinary.com/dadfpmrat/image/upload/v1763818963/Screenshot_2025-11-22_at_7.12.31_PM_prna1g.png",
+    image: "https://res.cloudinary.com/drsb05yxo/image/upload/v1764418665/Wellness_and_Healthy_Lifestyle_Shops_ncwpsh.png",
     description: "Health and spirituality go hand in hand, making wellness shops here a future-ready investment. By blending Ayurvedic remedies, organic products, and spiritual wellness items, shopkeepers tap into a fast-growing market.",
     bgColor: "#f0fdf4"
   },
   {
     title: "Flowers & Ethnic Decor Shops",
-    image: "https://res.cloudinary.com/dadfpmrat/image/upload/v1763819117/Screenshot_2025-11-22_at_7.13.13_PM_fsfdoj.png",
+    image: "https://res.cloudinary.com/drsb05yxo/image/upload/v1764418654/flower_shop_jdxqhl.png",
     description: "With every puja, festival, and cultural event requiring flowers and ethnic décor, these shops offer shopkeepers a high-demand, evergreen business. From floral arrangements to traditional decorative items.",
     bgColor: "#fdf2f8"
   },
   {
     title: "Tour & Travel Centre / Concierge Services",
-    image: "https://res.cloudinary.com/dadfpmrat/image/upload/v1763819228/Screenshot_2025-11-22_at_7.16.53_PM_snanog.png",
+    image: "https://res.cloudinary.com/drsb05yxo/image/upload/v1764418666/tour_kbzwxy.png",
     description: "For shopkeepers, a travel concierge at Krishna Bhumi Arcade means steady income from Shree Vrindavan Dham's growing tourist base. With millions visiting each year, services like guided tours, transport, and spiritual itineraries are in constant demand.",
     bgColor: "#eff6ff"
   }

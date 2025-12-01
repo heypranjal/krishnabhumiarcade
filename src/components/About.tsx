@@ -90,7 +90,7 @@ const About = () => {
                 <motion.img
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.5 }}
-                  src="https://res.cloudinary.com/dadfpmrat/image/upload/v1763823728/grand_images_zqjujb.webp"
+                  src="https://res.cloudinary.com/drsb05yxo/image/upload/v1764418656/grand_images_zqjujb_q552yg.webp"
                   alt="Grand entrance with ornate pillars"
                   className="w-full h-64 object-cover"
                 />

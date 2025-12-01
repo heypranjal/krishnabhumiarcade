@@ -15,7 +15,7 @@ const Navbar = () => {
           {/* Logo/Brand */}
           <Link to="/" className="flex items-center space-x-2 sm:space-x-3 group">
             <img
-              src="https://res.cloudinary.com/dadfpmrat/image/upload/v1763967586/Screenshot_2025-11-24_at_12.27.46_PM_japyh3.png"
+              src="https://res.cloudinary.com/drsb05yxo/image/upload/v1764418658/logo_tgyt4k.png"
               alt="Krishna Bhumi Arcade Logo"
               className="w-10 h-10 sm:w-12 sm:h-12 object-contain transition-all duration-300 group-hover:scale-110"
             />

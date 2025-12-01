@@ -3,12 +3,12 @@ import { Shield, Car, MoveVertical, Flame, Building, Leaf } from "lucide-react";
 import { useScrollReveal, useParallax } from "@/hooks/useScrollReveal";
 
 const amenities = [
-  { icon: Shield, title: "24×7 Security", description: "Comprehensive surveillance and safety", customImage: "https://res.cloudinary.com/dadfpmrat/image/upload/v1763822076/security_habouz.png" },
-  { icon: Car, title: "Ample Parking", description: "Multi-level parking facility", customImage: "https://res.cloudinary.com/dadfpmrat/image/upload/v1763822128/parking_sj2jnc.png" },
-  { icon: MoveVertical, title: "Escalators/Elevators", description: "Easy accessibility across floors", customImage: "https://res.cloudinary.com/dadfpmrat/image/upload/v1763822249/escaltor_vpmyqu.png" },
-  { icon: Flame, title: "Fire Safety Systems", description: "Advanced fire detection and prevention", customImage: "https://res.cloudinary.com/dadfpmrat/image/upload/v1763822374/fire_qjzabc.png" },
-  { icon: Building, title: "RCC Structure", description: "Robust earthquake-resistant design", customImage: "https://res.cloudinary.com/dadfpmrat/image/upload/v1763822473/rcc_jdi3za.png" },
-  { icon: Leaf, title: "Eco-Friendly Design", description: "Sustainable and energy efficient", customImage: "https://res.cloudinary.com/dadfpmrat/image/upload/v1763822595/eco_pw0hkw.png" }
+  { icon: Shield, title: "24×7 Security", description: "Comprehensive surveillance and safety", customImage: "https://res.cloudinary.com/drsb05yxo/image/upload/v1764418679/security_habouz_ssreal.png" },
+  { icon: Car, title: "Ample Parking", description: "Multi-level parking facility", customImage: "https://res.cloudinary.com/drsb05yxo/image/upload/v1764418660/parking_sj2jnc_isyfrw.png" },
+  { icon: MoveVertical, title: "Escalators/Elevators", description: "Easy accessibility across floors", customImage: "https://res.cloudinary.com/drsb05yxo/image/upload/v1764418659/escaltor_vpmyqu_hddaji.png" },
+  { icon: Flame, title: "Fire Safety Systems", description: "Advanced fire detection and prevention", customImage: "https://res.cloudinary.com/drsb05yxo/image/upload/v1764418654/fire_qjzabc_pzhylu.png" },
+  { icon: Building, title: "RCC Structure", description: "Robust earthquake-resistant design", customImage: "https://res.cloudinary.com/drsb05yxo/image/upload/v1764418677/rcc_jdi3za_vyktrz.png" },
+  { icon: Leaf, title: "Eco-Friendly Design", description: "Sustainable and energy efficient", customImage: "https://res.cloudinary.com/drsb05yxo/image/upload/v1764418659/eco_pw0hkw_jhc42n.png" }
 ];
 
 // Placeholder for IGBC badge - add actual image path
